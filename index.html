@@ -3,11 +3,12 @@
 <modal>asdfghjkl</modal>
 <nav><a href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj6gbubmen4AhWOX8AKHQeCDf0QyCl6BAgREAM&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU">text</a></nav>
 <script>
-var a = 0;
+var a = localStorage.getItem("a") || 0;
 var b = "";
 function button() {
 	a += 1;
 	document.getElementById("12345").innerHTML = a
+	localStorage.setItem("a",a)
 }
 document.onkeypress= (c) => {
 if (c.key === "Enter") {c.preventDefault()}}
@@ -20,6 +21,8 @@ function butt2on() {
 	document.getElementById("12345").innerHTML = a
 
 }
+
+	
 </script>
 <button onclick= "button()"> click for incriment </button>
 <button onclick= "butt2on()"> click for an a </button>
